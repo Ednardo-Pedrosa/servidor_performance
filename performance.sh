@@ -66,12 +66,10 @@ grep "siblings" /proc/cpuinfo | uniq | awk -F ': ' '{print $2}'
 print_separator
 
 # Coleta media de velocidade de escrita da unidade de armazenamento
-echo -e "${CYAN}Teste de velocidade de escrita:${NC}"
+echo -e "${CYAN}Teste de media da velocidade de escrita:${NC}"
 dd if=/dev/sda1 of=/tmp/testfile bs=1M count=1000 conv=fsync
 sleep 3
 dd if=/dev/sda1 of=/tmp/testfile bs=1M count=1000 conv=fsync
 sleep 3
 dd if=/dev/sda1 of=/tmp/testfile bs=1M count=1000 conv=fsync
-print_separator
-
 cat >> homologacao-servidor.txt
