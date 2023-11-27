@@ -16,7 +16,6 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # Sem cor
 
-cat >> homologacao-servidor.txt
 # Verifica a distribuição e a versão do Linux instalado
 echo -e "${CYAN}Distribuição e versão do Linux instalado:${NC}"
 #lsb_release -a
@@ -74,3 +73,5 @@ dd if=/dev/sda1 of=/tmp/testfile bs=1M count=1000 conv=fsync
 sleep 3
 dd if=/dev/sda1 of=/tmp/testfile bs=1M count=1000 conv=fsync
 print_separator
+
+cat >> homologacao-servidor.txt
