@@ -73,3 +73,5 @@ dd if=/dev/sda1 of=/tmp/testfile bs=1M count=1000 conv=fsync
 sleep 3
 dd if=/dev/sda1 of=/tmp/testfile bs=1M count=1000 conv=fsync
 cat >> homologacao-servidor.txt
+
+df -h
